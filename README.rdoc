@@ -1,11 +1,13 @@
 == README
+Yet another file uploader.
+Project has been created to present rails features.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+ruby 1.9
 
 * System dependencies
 
