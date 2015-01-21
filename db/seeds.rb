@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # User.delete_all
-UploadFile.delete_all
+Scrub.delete_all
 
 # User.create!([{
 # 	login: 'Imperior007',
@@ -33,25 +33,25 @@ UploadFile.delete_all
 # ]
 # 	)
 
-UploadFile.create!([
+Scrub.create!([
 	{
 	name: 'some_porn',
-    # file_type: 'video',
+    file_type: 'video',
     size: 560
     },
 	{
 	name: 'biber_song',
-    # file_type: 'music',
+    file_type: 'music',
     size: 89
 	},
 	{
 	name: 'pics_with_boobs',
-    # file_type: 'picture',
+    file_type: 'picture',
     size: 12
     },
     {
     name: 'Resume',
-    # file_type: 'documents',
+    file_type: 'documents',
     size: 7
     }
     ]

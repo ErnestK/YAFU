@@ -1,0 +1,31 @@
+<h1>Listing scrubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>File type</th>
+      <th>Size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scrubs.each do |scrub| %>
+      <tr>
+        <td><%= scrub.name %></td>
+        <td><%= scrub.file_type %></td>
+        <td><%= scrub.size %></td>
+        <td><%= link_to 'Show', scrub %></td>
+        <td><%= link_to 'Edit', edit_scrub_path(scrub) %></td>
+        <td><%= link_to 'Destroy', scrub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scrub', new_scrub_path %>

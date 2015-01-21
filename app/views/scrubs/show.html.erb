@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scrub.name %>
+</p>
+
+<p>
+  <strong>File type:</strong>
+  <%= @scrub.file_type %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @scrub.size %>
+</p>
+
+<%= link_to 'Edit', edit_scrub_path(@scrub) %> |
+<%= link_to 'Back', scrubs_path %>

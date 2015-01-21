@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :upload_files
+	has_many :scrubs
 	validates :login, presence: true, uniqueness: true
 	validates :name, presence: true
 	validates :password_digest, presence: true

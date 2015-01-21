@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121140758) do
+ActiveRecord::Schema.define(version: 20150121150347) do
+
+  create_table "scrubs", force: true do |t|
+    t.string   "name"
+    t.string   "file_type"
+    t.integer  "size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "scrubs", ["user_id"], name: "index_scrubs_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "login"
