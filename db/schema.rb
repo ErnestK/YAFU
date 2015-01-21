@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120165517) do
-
-# Could not dump table "upload_files" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+ActiveRecord::Schema.define(version: 20150121140758) do
 
   create_table "users", force: true do |t|
     t.string   "login"
