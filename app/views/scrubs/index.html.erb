@@ -1,8 +1,9 @@
+<div class="account_link"><h3><a href=/users>Account</a></h3></div>
 <h1>Listing scrubs</h1>
-
+<br>
 <table>
   <thead>
-    <tr>
+    <tr class="name_title">
       <th>Name</th>
       <th>File type</th>
       <th>Size</th>
@@ -11,18 +12,26 @@
       <th></th>
     </tr>
   </thead>
-
+  
   <tbody>
+  <% cache ['scrub', Scrub.latest] do %>
     <% @scrubs.each do |scrub| %>
-      <tr>
-        <td><%= scrub.name %></td>
-        <td><%= scrub.file_type %></td>
-        <td><%= scrub.size %></td>
-        <td><%= link_to 'Show', scrub %></td>
-        <td><%= link_to 'Edit', edit_scrub_path(scrub) %></td>
-        <td><%= link_to 'Destroy', scrub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% cache ['entry', scrub] do %>
+        <div class="entry">
+          <tr class="<%= cycle('list_line_odd', 'list_line_even')%>">
+            <td> <h3><%= scrub.name %></h3> </td>
+            <td> <h2><%= scrub.file_type %></h2></td>
+            <td> <num><%= scrub.size %></num></td>
+            <td class="list_actions">
+              <%= link_to 'Show', scrub %><br/>
+              <%= link_to 'Edit', edit_scrub_path(scrub) %><br/>
+              <%= link_to 'Destroy', scrub, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+        </div>
+      <% end %>
     <% end %>
+  <% end %>
   </tbody>
 </table>
 

@@ -1,3 +1,61 @@
-// Place all the styles related to the scrubs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.scrubs {
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	table tr td {
+		padding: 5px;
+		vertical-align: top;
+	}
+
+
+	.list_actions {
+		font-size: small;
+		text-align: right;
+		padding-left: 1em;
+	}
+
+	.list_line_even {
+		background: #87CEFA;
+	}
+
+	.list_line_odd {
+		background: #008080;
+	}
+
+	h3 {
+		font-size: 110%;
+		font-family: sans-serif;
+		margin-top: 0;
+		margin-bottom: 2px;
+		color: #227;
+ }
+
+	h2 {
+		font-size: 100%;
+		font-family: sans-serif;
+		margin-right: 50px;
+		margin-top: 0;
+		margin-bottom: 2px;
+		color: #323;
+	}
+
+	num {
+		color: #000000;
+		font-weight: bold;
+	}
+
+	.account_link{
+		text-align: right;
+	}
+
+	.name_title{
+		font-size: 140%;
+		font-family: sans-serif;
+		margin-top: 0;
+		margin-bottom: 2px;
+		text-align: left;
+	}
+}
