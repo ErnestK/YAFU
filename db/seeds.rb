@@ -27,10 +27,18 @@ User.create!([{
     name: 'Alescha',
     lastname: 'Lovok',
     d_birth: '03.03.1972'
+},
+    {
+    login: 'God',
+    password: 123456,
+    password_confirmation: 123456,
+    name: 'Admin',
+    lastname: 'baby',
+    d_birth: '05.04.1988'
 }
 ]
 	)
-puts "3 Users was been created"
+puts "3 Users was been created, and 1 ADMIN!"
 
 Scrub.create!([
 	{
