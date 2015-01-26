@@ -10,7 +10,8 @@ User.create!([{
     password_confirmation: '770',
     name: 'Dart',
     lastname: 'Veider',
-    d_birth: '02.03.1962'
+    d_birth: '02.03.1962',
+    email: 'ZhguNemogu@mail.i2p'
     },
     {
 	login: 'Nagibalka',
@@ -18,7 +19,8 @@ User.create!([{
     password_confirmation: '123',
     name: 'Max',
     lastname: 'Batkov',
-    d_birth: '19.11.1987'
+    d_birth: '19.11.1987',
+    email: 'karteris05@yandex.ru'
     },
     {
     login: 'Volodya',
@@ -26,7 +28,8 @@ User.create!([{
     password_confirmation: 344,
     name: 'Alescha',
     lastname: 'Lovok',
-    d_birth: '03.03.1972'
+    d_birth: '03.03.1972',
+    email: 'Alescha@mail.ru'
 },
     {
     login: 'God',
@@ -34,7 +37,8 @@ User.create!([{
     password_confirmation: 123456,
     name: 'Admin',
     lastname: 'baby',
-    d_birth: '05.04.1988'
+    d_birth: '05.04.1988',
+    email: 'khasanzhinov.game@gmail.com'
 }
 ]
 	)
