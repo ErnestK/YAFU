@@ -1,10 +1,15 @@
 class ScrubsController < ApplicationController
   before_action :set_scrub, only: [:show, :edit, :update, :destroy]
+  # before_filter :authenticate_user!
 
   # GET /scrubs
   # GET /scrubs.json
   def index
-    @scrubs = Scrub.all
+    # @scrubs = Scrub.all
+    @scrubs = Scrub.find_by(user_id: session[:user_id])
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    puts "session[:user_id] = #{session[:user_id]}"
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   end
 
   # GET /scrubs/1

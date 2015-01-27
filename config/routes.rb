@@ -1,4 +1,5 @@
 YAFU::Application.routes.draw do
+  devise_for :users
   get 'admin' => 'admin#index'
   controller :sessions do 
     get 'login' => :new

@@ -7,10 +7,11 @@ class SessionsController < ApplicationController
 	user ||= User.find_by(email: params[:login])
 	if user && user.authenticate(params[:password])
 		session[:user_id] = user.id
+		@user_id = user
 		if user.login == 'God'
-		  redirect_to admin_url
+			redirect_to admin_url
 		else
-		  redirect_to scrubs_url
+			redirect_to scrubs_url
 		end
 	else
 		redirect_to login_url, alert: "Invalid user/password combinations"

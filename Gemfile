@@ -47,3 +47,5 @@ end
 
 gem 'therubyracer'
 gem 'execjs'
+
+gem 'devise'
